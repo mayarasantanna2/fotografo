@@ -123,7 +123,7 @@ ol {
 	h2 {
 		color: $heading-color;
 		font-weight: 700;
-		text-transform: uppercase;
+		text-transform: none;
 		margin-bottom: 15px;
 	}
 	p {
@@ -168,7 +168,7 @@ ol {
 	padding: 14px 30px;
 	color: $white-color;
 	background: $primary-color;
-	text-transform: uppercase;
+	text-transform: none;
 	font-weight: 700;
 	font-family: 'Quantico', sans-serif;
 }
@@ -177,7 +177,7 @@ ol {
 	font-size: 15px;
 	color: $white-color;
 	font-weight: 700;
-	text-transform: uppercase;
+	text-transform: none;
 	letter-spacing: 2px;
 	font-family: 'Quantico', sans-serif;
 	display: inline-block;
@@ -371,7 +371,7 @@ ol {
 			a {
 				font-size: 16px;
 				font-weight: 700;
-				text-transform: uppercase;
+				text-transform: none;
 				color: $heading-color;
 				display: block;
 				padding: 32px 8px 30px;
@@ -501,7 +501,7 @@ ol {
 			font-size: 60px;
 			color: $white-color;
 			font-weight: 700;
-			text-transform: uppercase;
+			text-transform: none;
 			margin-bottom: 20px;
 			position: relative;
 			top: 100px;
@@ -565,7 +565,7 @@ ol {
 	h3 {
 		color: #191039;
 		font-weight: 700;
-		text-transform: uppercase;
+		text-transform: none;
 		margin-bottom: 10px;
 	}
 }
@@ -630,7 +630,7 @@ ol {
 		h4 {
 			color: $heading-color;
 			font-weight: 700;
-			text-transform: uppercase;
+			text-transform: none;
 			margin-bottom: 10px;
 			opacity: 0;
 			-webkit-transition: all .3s;
@@ -810,7 +810,7 @@ ol {
 		font-size: 15px;
 		color: $white-color;
 		font-weight: 700;
-		text-transform: uppercase;
+		text-transform: none;
 		letter-spacing: 2px;
 		display: inline-block;
 		padding: 15px 102px 13px;
@@ -857,7 +857,7 @@ ol {
 		font-size: 20px;
 		color: $white-color;
 		font-weight: 700;
-		text-transform: uppercase;
+		text-transform: none;
 		margin-bottom: 35px;
 	}
 	.fw-instagram {
@@ -1027,7 +1027,7 @@ ol {
 					font-size: 20px;
 					color: $heading-color;
 					font-weight: 700;
-					text-transform: uppercase;
+					text-transform: none;
 					margin-bottom: 8px;
 				}
 				p {
@@ -1060,7 +1060,7 @@ ol {
 			font-size: 20px;
 			color: $heading-color;
 			font-weight: 700;
-			text-transform: uppercase;
+			text-transform: none;
 			margin-bottom: 5px;
 		}
 		span {
@@ -1098,7 +1098,7 @@ ol {
 		font-size: 50px;
 		color: $white-color;
 		font-weight: 700;
-		text-transform: uppercase;
+		text-transform: none;
 		margin-bottom: 15px;
 	}
 	p {
@@ -1155,7 +1155,7 @@ ol {
 			h5 {
 				color: $heading-color;
 				font-weight: 700;
-				text-transform: uppercase;
+				text-transform: none;
 				margin-bottom: 5px;
 			}
 			span {
@@ -1199,7 +1199,7 @@ ol {
 			font-size: 20px;
 			color: $heading-color;
 			font-weight: 700;
-			text-transform: uppercase;
+			text-transform: none;
 			overflow: hidden;
 			line-height: 36px;
 		}
@@ -1309,7 +1309,7 @@ ol {
 			color: $heading-color;
 			font-weight: 700;
 			padding-bottom: 32px;
-			text-transform: uppercase;
+			text-transform: none;
 			border-bottom: 1px solid #ebebeb;
 			-webkit-transition: all .2s;
 			-o-transition: all .2s;
@@ -1364,7 +1364,7 @@ ol {
 	h2 {
 		color: $white-color;
 		font-weight: 700;
-		text-transform: uppercase;
+		text-transform: none;
 		margin-bottom: 12px;
 	}
 	ul {
@@ -1472,7 +1472,7 @@ ol {
 			color: $heading-color;
 			font-weight: 700;
 			font-size: 20px;
-			text-transform: uppercase;
+			text-transform: none;
 			margin-bottom: 5px;
 		}
 		span {
@@ -1508,7 +1508,7 @@ ol {
 			display: inline-block;
 			background: $primary-color;
 			padding: 2px 12px;
-			text-transform: uppercase;
+			text-transform: none;
 		}
 		h5 {
 			margin-top: 20px;
@@ -1518,7 +1518,7 @@ ol {
 				color: $heading-color;
 				font-weight: 700;
 				line-height: 27px;
-				text-transform: uppercase;
+				text-transform: none;
 			}
 		}
 		ul {
@@ -1587,7 +1587,7 @@ ol {
 			font-size: 20px;
 			font-weight: 700;
 			color: $heading-color;
-			text-transform: uppercase;
+			text-transform: none;
 			position: relative;
 			margin-bottom: 35px;
 			&:after {
@@ -1615,7 +1615,7 @@ ol {
 						font-size: 15px;
 						color: $heading-color;
 						font-weight: 700;
-						text-transform: uppercase;
+						text-transform: none;
 						line-height: 20px;
 					}
 					span {
@@ -1821,7 +1821,7 @@ ol {
 				font-size: 13px;
 				display: inline-block;
 				color: #444444;
-				text-transform: uppercase;
+				text-transform: none;
 				padding: 8px 14px;
 				background: #ebebeb;
 				margin-right: 9px;
@@ -1835,7 +1835,7 @@ ol {
 			span {
 				display: inline-block;
 				font-size: 15px;
-				text-transform: uppercase;
+				text-transform: none;
 				font-weight: 600;
 				color: $heading-color;
 				margin-right: 20px;
@@ -1892,7 +1892,7 @@ ol {
 			h6 {
 				font-size: 15px;
 				color: $heading-color;
-				text-transform: uppercase;
+				text-transform: none;
 				font-weight: 700;
 				margin-bottom: 25px;
 				span {
@@ -1909,7 +1909,7 @@ ol {
 					display: inline-block;
 					background: $primary-color;
 					padding: 2px 12px;
-					text-transform: uppercase;
+					text-transform: none;
 				}
 				h5 {
 					font-size: 20px;
@@ -1940,7 +1940,7 @@ ol {
 			h4 {
 				color: $heading-color;
 				font-weight: 700;
-				text-transform: uppercase;
+				text-transform: none;
 				margin-bottom: 8px;
 			}
 			p {
@@ -1965,7 +1965,7 @@ ol {
 		h4 {
 			color: $heading-color;
 			font-weight: 700;
-			text-transform: uppercase;
+			text-transform: none;
 			margin-bottom: 35px;
 		}
 		.comment-item {
@@ -1985,7 +1985,7 @@ ol {
 					font-size: 20px;
 					color: $heading-color;
 					font-weight: 700;
-					text-transform: uppercase;
+					text-transform: none;
 					margin-right: 8px;
 				}
 				p {
@@ -2165,7 +2165,7 @@ ol {
 	h3 {
 		color: $heading-color;
 		font-weight: 700;
-		text-transform: uppercase;
+		text-transform: none;
 		margin-bottom: 15px;
 	}
 	p {
@@ -2194,7 +2194,7 @@ ol {
 				font-size: 20px;
 				color: $heading-color;
 				font-weight: 700;
-				text-transform: uppercase;
+				text-transform: none;
 				margin-bottom: 10px;
 			}
 			p {
@@ -2231,7 +2231,7 @@ ol {
 	h3 {
 		color: $heading-color;
 		font-weight: 700;
-		text-transform: uppercase;
+		text-transform: none;
 		margin-bottom: 35px;
 	}
 	form {
