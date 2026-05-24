@@ -33,6 +33,103 @@
 /*----------------------------------------*/
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600&display=swap');
 
+.pricing-section{
+    padding: 80px 0;
+   
+}
+
+.pricing-title{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.pricing-title h2{
+    font-size: 42px;
+    color: #3d2b1f;
+    margin-bottom: 10px;
+}
+
+.pricing-title p{
+    color: #8a7b70;
+}
+
+.pricing-cards{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pricing-card{
+    width: 350px;
+    background: #fff;
+
+    border-radius: 25px 25px 0 0;
+    overflow: hidden;
+
+    border: 1px solid #BA9074;
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.pricing-card:hover{
+    transform: translateY(-8px);
+}
+
+.pricing-card img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+
+    border-radius: 25px 25px 0 0;
+}
+
+.card-content{
+    padding: 30px;
+    text-align: center;
+}
+
+.card-content h3{
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #2d1f17;
+}
+
+.card-content p{
+    color: #7a6d63;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.card-content h2{
+    color: #b38b6d;
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.card-btn{
+    display: inline-block;
+
+    padding: 14px 35px;
+
+    background: #b38b6d;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+	letter-spacing: 1.4px;
+	font-size: 13px;
+}
+
+.card-btn:hover{
+    background: #96745b;
+}
+
 .stats{
   background: #BA9074;
   padding: 40px 60px;
@@ -206,7 +303,7 @@ h6 {
 
 p {
 	font-size: 15px;
-	font-family: "Open Sans", sans-serif;
+	font-family: 'Poppins', sans-serif;
 	color: #666666;
 	font-weight: 400;
 	line-height: 26px;
@@ -289,13 +386,20 @@ ol {
 
 .primary-btn {
 	display: inline-block;
-	font-size: 16px;
+
 	padding: 14px 30px;
 	color: #ffffff;
-	background: #009603;
+	background: #b38b6d;
 	text-transform: none;
-	font-weight: 700;
+	font-weight: 600;
 	font-family: 'Poppins', sans-serif;
+
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s;
+
+	letter-spacing: 1.4px;
+	font-size: 13px;
 
 }
 
@@ -515,7 +619,7 @@ ol {
 	bottom: 0;
 	height: 3px;
 	width: 100%;
-	background: #009603;
+	background: #BA9074;
 	content: "";
 	opacity: 0;
 	-webkit-transition: all 0.3s;
@@ -1422,7 +1526,7 @@ ol {
 }
 
 .pricing-item:hover:after {
-	background: #009603;
+	background: #BA9074;
 }
 
 .pricing-item:hover .pi-price h2 {
@@ -3160,4 +3264,29 @@ ol {
 		font-size: 48px;
 	}
 
+}
+.cardp p{
+	
+    margin-bottom: 8px;
+	text-align: left;
+
+}
+p{
+	letter-spacing: 1.4px;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo1{
+    display: flex;
+    align-items: center;
+}
+
+.logo1 img{
+    height: 55px;
+    width: auto;
+
+    display: block;
 }
