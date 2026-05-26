@@ -584,6 +584,9 @@ ol {
     cursor: pointer;
     color: #000;
 }
+.mobile-menu-icon {
+    display: none;
+}
 
 @media only screen and (max-width: 768px) {
 
@@ -603,7 +606,7 @@ ol {
         margin-top: 20px;
     }
 
-    .nav-menu.active {
+    .nav-menu.active {b
         display: block;
     }
 
