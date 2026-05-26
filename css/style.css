@@ -565,10 +565,55 @@ ol {
 -----------------------*/
 
 .header-section.header-normal {
-	-webkit-box-shadow: 0px 5px 25px rgba(170, 170, 170, 0.1);
-	box-shadow: 0px 5px 25px rgba(170, 170, 170, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background: #fff;
+
+    -webkit-box-shadow: 0px 5px 25px rgba(170, 170, 170, 0.1);
+    box-shadow: 0px 5px 25px rgba(170, 170, 170, 0.1);
+
+    animation: menuAnim 0.4s ease;
 }
 
+.mobile-menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #000;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .mobile-menu-icon {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        z-index: 1000;
+    }
+
+    .nav-menu {
+        display: none;
+        width: 100%;
+        background: #fff;
+        padding: 20px 0;
+        margin-top: 20px;
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
+
+    .nav-menu ul {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
 .logo {
 	float: left;
 	padding: 30px 0;
@@ -1066,8 +1111,15 @@ ol {
 -----------------------*/
 
 .footer-section {
-	background: #000606;
+	background: #624b3b;
 	padding-top: 70px;
+	color: white;
+}
+footer p {
+	color: white;
+}
+footer a{
+	color: white;
 }
 
 .fs-about {
@@ -3302,4 +3354,22 @@ body{
 }
 header{
 	background-color: #ffffff;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+
+
+
+@keyframes menuAnim {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }

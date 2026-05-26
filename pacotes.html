@@ -326,6 +326,18 @@
     <script src="js/jquery.slicknav.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/menu.js"></script>
+    <script>
+        window.addEventListener("scroll", function () {
+            const header = document.querySelector(".header-section");
+
+            if (window.scrollY > 100) {
+                header.classList.add("header-normal");
+            } else {
+                header.classList.remove("header-normal");
+            }
+        });
+    </script>
 </body>
 
 </html>
