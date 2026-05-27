@@ -2643,10 +2643,14 @@ footer a{
 }
 
 .contact-text h3 {
-	color: #111111;
+	color: #715340;
 	font-weight: 700;
 	text-transform: none;
 	margin-bottom: 15px;
+}
+
+.contact-text hr {
+	color: #715340; 
 }
 
 .contact-text p {
@@ -2662,7 +2666,7 @@ footer a{
 .contact-text .ct-item .ct-icon {
 	height: 80px;
 	width: 80px;
-	background: #009603;
+	background: #705340;
 	border-radius: 50%;
 	font-size: 40px;
 	line-height: 80px;
@@ -2679,14 +2683,14 @@ footer a{
 
 .contact-text .ct-item .ct-text h5 {
 	font-size: 20px;
-	color: #111111;
+	color: #705340;
 	font-weight: 700;
 	text-transform: none;
 	margin-bottom: 10px;
 }
 
 .contact-text .ct-item .ct-text p {
-	color: #444444;
+	color: #705340;
 	margin-bottom: 0;
 }
 
@@ -2695,7 +2699,7 @@ footer a{
 	display: inline-block;
 	margin-right: 30px;
 	font-size: 15px;
-	color: #444444;
+	color: #705340;
 	position: relative;
 }
 
@@ -2714,42 +2718,57 @@ footer a{
 	display: none;
 }
 
+/* Parte dos forms */
+
+.contact-form form {
+	background-color:#E8E1DA ;
+	border: 25px solid #E8E1DA;
+
+}
+
 .contact-form h3 {
-	color: #111111;
+	color: #715340;
 	font-weight: 700;
 	text-transform: none;
 	margin-bottom: 35px;
 }
 
 .contact-form form input {
+	
 	height: 50px;
 	width: 100%;
 	padding-left: 20px;
 	font-size: 14px;
-	color: #444444;
-	background: transparent;
+	color: #715340;
+	background: #F0ECE8;
 	margin-bottom: 30px;
-	border: 1px solid #e1e1e1;
+	border: 0.5px solid #A28979;
+}
+
+.contact-form form label {
+	color: #705340;
+	font-weight: bold;
+	
 }
 
 .contact-form form input::-webkit-input-placeholder {
-	color: #444444;
+	color: #715340;
 }
 
 .contact-form form input::-moz-placeholder {
-	color: #444444;
+	color: #715340;
 }
 
 .contact-form form input:-ms-input-placeholder {
-	color: #444444;
+	color: #715340;
 }
 
 .contact-form form input::-ms-input-placeholder {
-	color: #444444;
+	color: #715340;
 }
 
 .contact-form form input::placeholder {
-	color: #444444;
+	color: #715340;
 }
 
 .contact-form form textarea {
@@ -2758,11 +2777,13 @@ footer a{
 	padding-top: 12px;
 	height: 100px;
 	font-size: 14px;
-	color: #444444;
+	color: #ffffff;  
 	background: transparent;
 	resize: none;
 	border: 1px solid #e1e1e1;
 	margin-bottom: 24px;
+	border-radius: 8px;
+	box-sizing: border-box;     
 }
 
 .contact-form form textarea::-webkit-input-placeholder {
