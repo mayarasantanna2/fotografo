@@ -2828,6 +2828,9 @@ font-size: 15px;
     background: #705340;
     border: none;
     margin: 0 auto;
+	 
+
+	
 }
 
 .contact-form .botaocontato:hover {
@@ -3641,11 +3644,16 @@ html{
 	  margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family: Arial, Helvetica, sans-serif;
 	min-height:100vh;
     display:flex;
     justify-content:center;
     align-items:center;
+
+	
+	
+	font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+	letter-spacing: 1.4px;
 }
 
 .login-box{
@@ -3688,6 +3696,12 @@ label{
     margin-bottom:8px;
     font-size:14px;
     letter-spacing:1px;
+
+	
+	font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+	letter-spacing: 1.4px;
+	
 }
 
 .input-group{
@@ -3729,8 +3743,13 @@ label{
 .remember{
     display:flex;
     align-items:center;
-    gap:8px;
+    gap:6px;
     font-weight:normal;
+	
+	
+	font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+	letter-spacing: 1.4px;
 }
 
 .remember input{
@@ -3768,6 +3787,7 @@ a {
     margin:30px 0 15px;
     position:relative;
     text-align:center;
+	
 }
 
 .divider::before{
@@ -3781,7 +3801,7 @@ a {
 }
 
 .divider span{
-    background:#f6f3f1;
+    background:#f0ece8;
     padding:0 12px;
     position:relative;
     color:#7b5a43;
@@ -3900,8 +3920,17 @@ label{
     background:#7f5d47;
     color:white;
     font-size:16px;
-    letter-spacing:2px;
     cursor:pointer;
+
+	font-weight: 600;
+	font-family: 'Poppins', sans-serif;
+
+    text-decoration: none;
+    border-radius: 10px;
+    transition: 0.3s;
+
+	letter-spacing: 1.4px;
+	font-size: 13px;
 }
 
 .botaocadastro:hover{
@@ -3918,4 +3947,14 @@ label{
     color:#4a3527;
     font-weight:bold;
     text-decoration:none;
+}
+.placeholder{
+	
+	font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    
+    
+
+	letter-spacing: 1.4px;
+	
 }
