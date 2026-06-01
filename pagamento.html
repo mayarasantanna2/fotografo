@@ -49,7 +49,7 @@
                             <li><a href="#sobre">SOBRE</a></li>
                             <li><a href="pacotes.html">PACOTES</a></li>
                             <li><a href="./portfolio.html">PORTFÓLIO</a></li>
-                            <li class="active"><a href="agendamento.html">AGENDAMENTO</a></li>
+                            <li class="active" ><a href="agendamento.html">AGENDAMENTO</a></li>
                             <li><a href="./blog.html">GALERIA</a></li>
                             <li><a href="contact.html">CONTATO</a></li>
                     </nav>
@@ -60,148 +60,127 @@
         <br>
     </header>
     <!-- Header End -->
+<section class="payment-section">
 
-    <div class="bannercontato"> <!--Foto da may e geo -->
-        <img class="fotocontato" src="img/banneragendamento.png">
-    </div>
-    <section class="booking-section">
+    <div class="payment-container">
 
-        <span class="booking-subtitle">COMO FUNCIONA</span>
+        <div class="payment-form-card">
 
-        <div class="booking-steps">
+            <h1>Pagamento</h1>
 
-            <div class="booking-step">
-                <div class="booking-circle">1</div>
-                <p>Preencha o formulário com seus dados</p>
-            </div>
+            <p class="payment-description">
+                Quase lá! Escolha a forma de pagamento para confirmar seu agendamento.
+            </p>
 
-            <div class="booking-divider"></div>
+            <div class="payment-method-card">
 
-            <div class="booking-step">
-                <div class="booking-circle">2</div>
-                <p>Realize o pagamento</p>
-            </div>
+                <h5>ESCOLHA A FORMA DE PAGAMENTO</h5>
 
-            <div class="booking-divider"></div>
+                <label class="payment-option active">
+                    <input type="radio" checked>
+                    Cartão de crédito/débito
+                </label>
 
-            <div class="booking-step">
-                <div class="booking-circle">3</div>
-                <p>Entraremos em contato para confirmar</p>
-            </div>
+                <div class="payment-fields">
 
-            <div class="booking-divider"></div>
-
-            <div class="booking-step">
-                <div class="booking-circle">4</div>
-                <p>Tudo pronto! É só viver o momento</p>
-                <p></p>
-            </div>
-
-        </div>
-
-        <div class="booking-container">
-
-            <div class="booking-form-card">
-
-                <h3 class="booking-title">FAÇA SEU AGENDAMENTO</h3>
-                <form>
-
-                    <div class="booking-grid">
-
-                        <div class="input-group">
-                            <label>Nome Completo</label>
-                            <input type="text" placeholder="Digite seu nome">
-                        </div>
-
-                        <div class="input-group">
-                            <label>Data Desejada</label>
-                            <input type="text" id="data-agendamento" placeholder="Selecione uma data">
-                        </div>
-
-                        <div class="input-group">
-                            <label>Telefone</label>
-                            <input type="tel" placeholder="(11) 99999-9999">
-                        </div>
-
-                        <div class="input-group">
-                            <label>Pacote</label>
-                            <select>
-                                <option value="">Selecione uma opção</option>
-                                <option>Casamento Básico</option>
-                                <option>Casamento Clássico</option>
-                                <option>Casamento Completo</option>
-                                <option>Ensaio Individual</option>
-                                <option>Ensaio Familiar</option>
-                                <option>Evento Corporativo</option>
-                            </select>
-                        </div>
-
-                        <div class="input-group">
-                            <label>E-mail</label>
-                            <input type="email" placeholder="seuemail@email.com">
-                        </div>
-
-                        <div class="input-group">
-                            <label>Local do Evento ou Ensaio</label>
-                            <input type="text" placeholder="Cidade, salão, estúdio...">
-                        </div>
-
+                    <div class="input-group">
+                        <label>Nome no cartão</label>
+                        <input type="text" placeholder="Nome como está no cartão">
                     </div>
 
                     <div class="input-group">
-                        <label>Detalhes do Agendamento</label>
-                        <textarea
-                            placeholder="Conte mais sobre o evento, quantidade de pessoas, horário desejado ou qualquer informação importante."></textarea>
+                        <label>Número do cartão</label>
+                        <input type="text" placeholder="0000 0000 0000 0000">
                     </div>
-                    
-                    <a href="pagamento.html" class="booking-btn">
-                        ENVIAR SOLICITAÇÃO
-                    </a>
 
-                </form>
+                    <div class="payment-row">
+
+                        <div class="input-group">
+                            <label>Validade</label>
+                            <input type="text" placeholder="MM/AA">
+                        </div>
+
+                        <div class="input-group">
+                            <label>CVC</label>
+                            <input type="text" placeholder="123">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <label class="payment-option">
+                    <input type="radio">
+                    Pix
+                </label>
+
+                <label class="payment-option">
+                    <input type="radio">
+                    Boleto Bancário
+                </label>
 
             </div>
 
-            <div class="booking-info-card">
+            <div class="coupon-card">
 
-                <div class="booking-info-item">
-                    <i class="fa fa-clock-o"></i>
-                    <div>
-                        <h4>ATENDIMENTO</h4>
-                        <p>Segunda a Sexta: 9h às 18h</p>
-                    </div>
+                <h5>CUPOM DE DESCONTO (OPCIONAL)</h5>
+
+                <div class="coupon-row">
+                    <input type="text" placeholder="Digite seu código">
+                    <button type="button">APLICAR</button>
                 </div>
 
-                <div class="booking-info-item">
-                    <i class="fa fa-map-marker"></i>
-                    <div>
-                        <h4>LOCALIZAÇÃO</h4>
-                        <p>Atendimento em estúdio, externo ou no local do evento.</p>
-                    </div>
+            </div>
+
+            <button class="booking-btn">
+                CONFIRMAR PAGAMENTO
+            </button>
+
+        </div>
+
+        <div class="payment-summary-card">
+
+            <h5>RESUMO DO PEDIDO</h5>
+
+            <div class="summary-package">
+
+                <img src="img/casamento.jpg" alt="">
+
+                <div>
+                    <h4>Pacote Casamento Completo</h4>
+                    <p>Cobertura Completa + Pré Wedding + Álbum</p>
                 </div>
 
-                <div class="booking-info-item">
-                    <i class="fa fa-reply"></i>
-                    <div>
-                        <h4>RETORNO</h4>
-                        <p>Retornamos em até 24h úteis.</p>
-                    </div>
-                </div>
+            </div>
 
-                <div class="booking-info-item">
-                    <i class="fa fa-whatsapp"></i>
-                    <div>
-                        <h4>DÚVIDAS?</h4>
-                        <p>Entre em contato conosco pelo WhatsApp</p>
-                        <p>(11) 99999-9999</p>
-                    </div>
-                </div>
+            <div class="summary-info">
+                <p><strong>Data:</strong> 12 de Junho de 2026</p>
+                <p><strong>Horário:</strong> 16:00</p>
+                <p><strong>Local:</strong> Ribeirão Pires - SP</p>
+            </div>
 
+            <hr>
+
+            <div class="summary-price">
+                <span>Subtotal</span>
+                <span>R$ 6.800,00</span>
+            </div>
+
+            <div class="summary-price">
+                <span>Desconto</span>
+                <span>-R$ 275,00</span>
+            </div>
+
+            <div class="summary-total">
+                <span>Total</span>
+                <span>R$ 6.525,00</span>
             </div>
 
         </div>
 
-    </section>
+    </div>
+
+</section>
 
 
     <!-- Footer Section Begin -->
@@ -215,7 +194,7 @@
                                 <img style="width: 220px;" src="img/Design sem nome (1).png" alt="">
                             </a>
                         </div>
-                        <p>Mais do que fotografias, experiências.
+                        <p >Mais do que fotografias, experiências.
                             Cada ensaio é pensado para capturar emoções reais de forma leve, elegante e natural.</p>
                         <div class="fa-social">
                             <a href="#"><i class="fa fa-facebook"></i></a>
@@ -294,23 +273,6 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/menu.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-
-    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
-    <script>
-        flatpickr("#data-agendamento", {
-            minDate: "today",
-
-            disable: [
-                "2026-06-04",
-                "2026-06-06",
-                "2026-06-07"
-            ],
-
-            dateFormat: "d/m/Y"
-        });
-    </script>
 </body>
 
 </html>
