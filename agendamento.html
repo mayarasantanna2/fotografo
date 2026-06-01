@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="zxx">
 
 <head>
@@ -45,95 +45,165 @@
                     </div>
                     <nav class="nav-menu mobile-menu">
                         <ul><br>
-                            <li ><a href="./index.html">INÍCIO</a></li>
+                            <li><a href="./index.html">INÍCIO</a></li>
                             <li><a href="#sobre">SOBRE</a></li>
                             <li><a href="pacotes.html">PACOTES</a></li>
                             <li><a href="./portfolio.html">PORTFÓLIO</a></li>
-                            <li><a href="agendamento.html">AGENDAMENTO</a></li>
+                            <li class="active" ><a href="agendamento.html">AGENDAMENTO</a></li>
                             <li><a href="./blog.html">GALERIA</a></li>
                             <li><a href="contact.html">CONTATO</a></li>
-
-                        </ul>
                     </nav>
 
                 </div>
             </div>
         </div>
         <br>
+    </header>
+    <!-- Header End -->
 
-            <title>Login Galeria</title>
-    <link rel="stylesheet" href="style.css">
+    <div class="bannercontato"> <!--Foto da may e geo -->
+        <img class="fotocontato" src="img/banneragendamento.png" >
+    </div>
+<section class="booking-section">
 
-    <!-- Ícones -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <span class="booking-subtitle">COMO FUNCIONA</span>
 
-    </header> <!-- Header End -->
+    <div class="booking-steps">
 
-
-
- <main> <!--começo principal-->
-        <br><br><br>
-    <div class="paidetodos">
-    <div class="login-box">
-
-        <div class="icon-top">
-            <i class="fa-solid fa-lock"></i>
+        <div class="booking-step">
+            <div class="booking-circle">1</div>
+            <p>Preencha o formulário com seus dados</p>
         </div>
 
-        <h2 class="login">LOGIN</h2>
+        <div class="booking-divider"></div>
 
-        <form>
+        <div class="booking-step">
+            <div class="booking-circle">2</div>
+            <p>Realize o pagamento</p>
+        </div>
 
-            <label>E-mail</label>
-            <div class="input-group">
-                <i class="fa-regular fa-envelope"></i>
-                <input type="email" placeholder="Digite seu email cadastrado">
-            </div>
+        <div class="booking-divider"></div>
 
-            <label>Senha</label>
-            <div class="input-group">
-                <i class="fa-solid fa-lock"></i>
-                <input type="password" placeholder="Digite sua senha">
-            </div>
+        <div class="booking-step">
+            <div class="booking-circle">3</div>
+            <p>Entraremos em contato para confirmar</p>
+        </div>
 
-            <div class="options">
-                <label style=" font-family: 'Poppins', sans-serif," class="remember">
-                    <input type="checkbox">
-                    Lembrar de mim
-                </label>
+        <div class="booking-divider"></div>
 
-                <a href="blabla">Esqueci a minha senha</a>
-            </div>
-
-            <button type="submit"> <!--colocar Link falso aq-->
-               <a href=""> ACESSAR GALERIA </a>
-            </button>
-
-            <div class="divider">
-                <span>ou</span>
-            </div>
-
-            <p class="register">
-                Ainda não tem acesso?
-                <a href="cadastro.html">Clique aqui</a>
-            </p>
-
-        </form>
+        <div class="booking-step">
+            <div class="booking-circle">4</div>
+            <p>Tudo pronto! É só viver o momento</p>
+            <p></p>
+        </div>
 
     </div>
-   
+
+    <div class="booking-container">
+
+        <div class="booking-form-card">
+
+            <h3 class="booking-title">FAÇA SEU AGENDAMENTO</h3>
+<form>
+
+    <div class="booking-grid">
+
+        <div class="input-group">
+            <label>Nome Completo</label>
+            <input type="text" placeholder="Digite seu nome">
+        </div>
+
+        <div class="input-group">
+            <label>Data Desejada</label>
+            <input type="date">
+        </div>
+
+        <div class="input-group">
+            <label>Telefone</label>
+            <input type="tel" placeholder="(11) 99999-9999">
+        </div>
+
+        <div class="input-group">
+            <label>Pacote</label>
+            <select>
+                <option value="">Selecione uma opção</option>
+                <option>Casamento Básico</option>
+                <option>Casamento Clássico</option>
+                <option>Casamento Completo</option>
+                <option>Ensaio Individual</option>
+                <option>Ensaio Familiar</option>
+                <option>Evento Corporativo</option>
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label  >E-mail</label>
+            <input type="email" placeholder="seuemail@email.com">
+        </div>
+
+        <div class="input-group">
+            <label>Local do Evento ou Ensaio</label>
+            <input type="text" placeholder="Cidade, salão, estúdio...">
+        </div>
+
     </div>
-    <br><br><br>
- </main>
+
+    <div class="input-group">
+        <label>Detalhes do Agendamento</label>
+        <textarea placeholder="Conte mais sobre o evento, quantidade de pessoas, horário desejado ou qualquer informação importante."></textarea>
+    </div>
+
+    <button class="booking-btn">
+        ENVIAR SOLICITAÇÃO
+    </button>
+
+</form>
+
+        </div>
+
+       <div class="booking-info-card">
+
+    <div class="booking-info-item">
+        <i class="fa fa-clock-o"></i>
+        <div>
+            <h4>ATENDIMENTO</h4>
+            <p>Segunda a Sexta: 9h às 18h</p>
+        </div>
+    </div>
+
+    <div class="booking-info-item">
+        <i class="fa fa-map-marker"></i>
+        <div>
+            <h4>LOCALIZAÇÃO</h4>
+            <p>Atendimento em estúdio, externo ou no local do evento.</p>
+        </div>
+    </div>
+
+    <div class="booking-info-item">
+        <i class="fa fa-reply"></i>
+        <div>
+            <h4>RETORNO</h4>
+            <p>Retornamos em até 24h úteis.</p>
+        </div>
+    </div>
+
+    <div class="booking-info-item">
+        <i class="fa fa-whatsapp"></i>
+        <div>
+            <h4>DÚVIDAS?</h4>
+            <p>Entre em contato conosco pelo WhatsApp</p>
+            <p>(11) 99999-9999</p>
+        </div>
+    </div>
+
+</div>
+
+    </div>
+
+</section>
 
 
-
-
-
-
-
-     <!-- Footer Section Begin -->
+    <!-- Footer Section Begin -->
     <footer class="footer-section">
         <div class="container">
             <div class="row">
@@ -144,7 +214,7 @@
                                 <img style="width: 220px;" src="img/Design sem nome (1).png" alt="">
                             </a>
                         </div>
-                        <p>Mais do que fotografias, experiências.
+                        <p >Mais do que fotografias, experiências.
                             Cada ensaio é pensado para capturar emoções reais de forma leve, elegante e natural.</p>
                         <div class="fa-social">
                             <a href="#"><i class="fa fa-facebook"></i></a>
@@ -175,7 +245,7 @@
                         <ul>
                             <li><a href="agendamento.html">Agendamento</a></li>
                             <li><a href="galeria.html">Galeria</a></li>
-                            <li><a href="contact.html">Contato</a></li>
+                            <li><a href="contato.html">Contato</a></li>
                         </ul>
                     </div>
                 </div>
@@ -188,15 +258,11 @@
 
 
 
-
-
-
                     </div>
                 </div>
                 <div class="col-lg-12">
                     <div class="copyright-text">
                         <p>© 2026 Rafael Lima Fotografia. Todos os direitos reservados.
-
 
                         </p>
                     </div>
@@ -228,3 +294,5 @@
     <script src="js/main.js"></script>
     <script src="js/menu.js"></script>
 </body>
+
+</html>
