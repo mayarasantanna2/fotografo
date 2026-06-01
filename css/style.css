@@ -2634,6 +2634,14 @@ footer a{
 -----------------------*/
 
 
+.bannercontato {
+    width: 100%;
+    max-width: 1584px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
 .contact-text .pcontato {
 	margin-bottom: 1%;
 	color: #715340;
@@ -2717,6 +2725,11 @@ footer a{
 
 .contact-text .ct-item .ct-text ul li:last-child:after {
 	display: none;
+}
+
+
+.iconContato {
+	 width: 20%;
 }
 
 /* Parte dos forms */
@@ -3618,4 +3631,291 @@ html{
         transform: translateY(0);
         opacity: 1;
     }
+}
+
+
+
+/*---------------------------------- PARTE LOGIN ----------------------------------*/
+
+.paidetodos {
+	  margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+	min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.login-box{
+    width:550px;
+	background-color: #f0ece8;;
+    border:1.5px solid #c79d7b;
+    border-radius:30px;
+    padding:80px 80px 60px;
+    position:relative;
+}
+
+.icon-top{
+    width:70px;
+    height:70px;
+    background:#7b5a43;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:0 auto 15px;
+}
+
+.icon-top i{
+    color:white;
+    font-size:30px;
+}
+
+.login {
+    text-align:center;
+    color:#7b5a43;
+    font-size:24px;
+    letter-spacing:2px;
+    margin-bottom:35px;
+}
+
+label{
+    display:block;
+    color:#7b5a43;
+    font-weight:bold;
+    margin-bottom:8px;
+    font-size:14px;
+    letter-spacing:1px;
+}
+
+.input-group{
+    position:relative;
+    margin-bottom:20px;
+}
+
+.input-group i{
+    position:absolute;
+    left:15px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#7b5a43;
+}
+
+.input-group input{
+    width:100%;
+    height:45px;
+    padding-left:42px;
+    border:1px solid #c8b2a1;
+    border-radius:4px;
+    background:#fff;
+    outline:none;
+}
+
+.input-group input::placeholder{
+    color:#b3a7a0;
+    font-size:12px;
+}
+
+.options{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:10px 0 35px;
+    font-size:12px;
+}
+
+.remember{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-weight:normal;
+}
+
+.remember input{
+    width:15px;
+    height:15px;
+}
+
+.options a{
+    text-decoration:none;
+    color:#7b5a43;
+}
+
+button{
+    width:100%;
+    height:50px;
+    background:#7b5a43;
+    color:white;
+    border:none;
+    border-radius:4px;
+    font-size:16px;
+    letter-spacing:1px;
+    cursor:pointer;
+}
+
+button:hover{
+    opacity:.9;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+.divider{
+    margin:30px 0 15px;
+    position:relative;
+    text-align:center;
+}
+
+.divider::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:1px;
+    background:#c8b2a1;
+    left:0;
+    top:50%;
+}
+
+.divider span{
+    background:#f6f3f1;
+    padding:0 12px;
+    position:relative;
+    color:#7b5a43;
+    font-size:14px;
+}
+
+.register{
+    text-align:center;
+    font-size:13px;
+    color:#7b5a43;
+}
+
+.register a{
+    color:#4f392b;
+    font-weight:bold;
+    text-decoration:none;
+}
+
+/*----------------------------------Começo Cadastroooooo uhuuuuu------------------------------------*/
+
+.paginacadastro {
+	margin-top: 50px;
+	margin-bottom: 50px;
+    width:100%;
+    display:flex;
+    justify-content:center;
+    padding:40px 20px;
+}
+
+
+.register-box{
+   background:#f0ece8;
+    border:1.5px solid #c69b79;
+    border-radius:32px;
+    padding:90px 100px 30px;
+    position:relative;
+}
+
+.icon-topcadast{
+	margin-top: 20px;
+    width:64px;
+    height:64px;
+    border-radius:50%;
+    background:#7f5d47;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:absolute;
+    left:50%;
+    top:15px;
+    transform:translateX(-50%);
+}
+
+.icon-topcadast i{
+    color:white;
+    font-size:28px;
+}
+
+.cadastro{
+    text-align:center;
+    color:#7f5d47;
+    font-size:18px;
+    letter-spacing:2px;
+    margin-bottom:40px;
+	margin-top: 20px;
+    font-weight:700;
+}
+
+label{
+    display:block;
+    margin-bottom:10px;
+	margin-top: 15px;
+    color:#7f4747;
+    font-weight:700;
+    font-size:14px;
+    letter-spacing:1px;
+}
+
+.input-groupcadast{
+    position:relative;
+}
+
+.input-groupcadast i{
+ position:absolute;
+    left:10px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#7f5d47;
+    font-size:18px;
+    z-index:2;
+}
+
+.input-groupcadast input{ 
+    height:44px;
+    border:1px solid #ccb6a7;
+    border-radius:4px; 
+    background:#faf8f6;
+    padding-left: 100px;
+    outline:none;
+    color:#7f5d47;
+}
+
+.input-groupcadast input::placeholder{
+    color:#a89488;
+	font-size: 12px; ;
+	
+}
+
+.botaocadastro {
+    width:70%;
+    height:42px;
+    display:block;
+    margin:22px auto 18px;
+    border:none;
+    border-radius:4px;
+    background:#7f5d47;
+    color:white;
+    font-size:16px;
+    letter-spacing:2px;
+    cursor:pointer;
+}
+
+.botaocadastro:hover{
+    opacity:0.9;
+}
+
+.login-link{
+    text-align:center;
+    font-size:12px;
+    color:#8f7a6b;
+}
+
+.login-link a{
+    color:#4a3527;
+    font-weight:bold;
+    text-decoration:none;
 }
