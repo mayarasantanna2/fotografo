@@ -61,7 +61,7 @@
     </header>
     <!-- Header End -->
 
-    <div class="bannercontato"> <!--Foto da may e geo -->
+    <div class="bannercontato">
         <img class="fotocontato" src="img/banneragendamento.png">
     </div>
     <section class="booking-section">
@@ -104,28 +104,32 @@
             <div class="booking-form-card">
 
                 <h3 class="booking-title">FAÇA SEU AGENDAMENTO</h3>
-                <form>
+
+                <form id="bookingForm">
 
                     <div class="booking-grid">
 
                         <div class="input-group">
                             <label>Nome Completo</label>
-                            <input type="text" placeholder="Digite seu nome">
+                            <input id="nome" type="text" placeholder="Digite seu nome">
+                            <small class="erro" id="erroNome"></small>
                         </div>
 
                         <div class="input-group">
                             <label>Data Desejada</label>
                             <input type="text" id="data-agendamento" placeholder="Selecione uma data">
+                            <small class="erro" id="erroData"></small>
                         </div>
 
                         <div class="input-group">
                             <label>Telefone</label>
-                            <input type="tel" placeholder="(00) 00000-0000">
+                            <input maxlength="15" type="tel" id="telefone" placeholder="(00) 00000-0000">
+                            <small class="erro" id="erroTelefone"></small>
                         </div>
 
                         <div class="input-group">
                             <label>Pacote</label>
-                            <select>
+                            <select id="pacote">
                                 <option value="">Selecione uma opção</option>
                                 <option>Casamento Básico</option>
                                 <option>Casamento Clássico</option>
@@ -134,33 +138,40 @@
                                 <option>Ensaio Familiar</option>
                                 <option>Evento Corporativo</option>
                             </select>
+                            <small class="erro" id="erroPacote"></small>
                         </div>
 
                         <div class="input-group">
                             <label>E-mail</label>
-                            <input type="email" placeholder="seuemail@email.com">
+                            <input id="email" type="email" placeholder="seuemail@email.com">
+                            <small class="erro" id="erroEmail"></small>
                         </div>
 
                         <div class="input-group">
                             <label>Local do Evento ou Ensaio</label>
-                            <input type="text" placeholder="Cidade, salão, estúdio...">
+                            <input type="text" id="local" placeholder="Cidade, salão, estúdio...">
+                            <small class="erro" id="erroLocal"></small>
                         </div>
 
                     </div>
 
                     <div class="input-group">
                         <label>Detalhes do Agendamento</label>
-                        <textarea
+                        <textarea id="detalhes"
                             placeholder="Conte mais sobre o evento, quantidade de pessoas, horário desejado ou qualquer informação importante."></textarea>
+                        <small class="erro" id="erroDetalhes"></small>
                     </div>
-                    
-                    <a href="pagamento.html" class="booking-btn">
+
+                    <a href="#" class="booking-btn" id="btnAgendar">
                         ENVIAR SOLICITAÇÃO
                     </a>
 
                 </form>
 
             </div>
+
+
+
 
             <div class="booking-info-card">
 
@@ -200,7 +211,7 @@
             </div>
 
         </div>
-
+        </div>
     </section>
 
 
@@ -311,6 +322,106 @@
             dateFormat: "d/m/Y"
         });
     </script>
+    <script>
+
+        const telefone = document.getElementById('telefone');
+
+        telefone.addEventListener('input', function () {
+
+            let valor = this.value.replace(/\D/g, '');
+
+            valor = valor.replace(/^(\d{2})(\d)/g, '($1) $2');
+            valor = valor.replace(/(\d{5})(\d)/, '$1-$2');
+
+            this.value = valor;
+
+        });
+
+        document.getElementById('btnAgendar').addEventListener('click', function (e) {
+
+            e.preventDefault();
+
+            document.querySelectorAll('.erro').forEach(campo => {
+                campo.textContent = '';
+            });
+
+            let valido = true;
+
+            const nome = document.getElementById('nome').value.trim();
+            const data = document.getElementById('data-agendamento').value.trim();
+            const telefone = document.getElementById('telefone').value.trim();
+            const pacote = document.getElementById('pacote').value;
+            const email = document.getElementById('email').value.trim();
+            const local = document.getElementById('local').value.trim();
+            const detalhes = document.getElementById('detalhes').value.trim();
+
+            if (nome.length < 3) {
+                document.getElementById('erroNome').textContent =
+                    'Digite seu nome completo.';
+                valido = false;
+            }
+
+            if (data === '') {
+                document.getElementById('erroData').textContent =
+                    'Selecione uma data.';
+                valido = false;
+            }
+
+            if (telefone.length < 15) {
+                document.getElementById('erroTelefone').textContent =
+                    'Digite um telefone válido.';
+                valido = false;
+            }
+
+            if (pacote === '') {
+                document.getElementById('erroPacote').textContent =
+                    'Escolha um pacote.';
+                valido = false;
+            }
+
+            if (email === '') {
+                document.getElementById('erroEmail').textContent =
+                    'Digite um e-mail.';
+                valido = false;
+            }
+            else if (!email.includes('@')) {
+                document.getElementById('erroEmail').textContent =
+                    'O e-mail precisa conter @.';
+                valido = false;
+            }
+            else if (!email.includes('.')) {
+                document.getElementById('erroEmail').textContent =
+                    'Digite um domínio válido.';
+                valido = false;
+            }
+
+            if (local.length < 3) {
+                document.getElementById('erroLocal').textContent =
+                    'Informe o local do evento.';
+                valido = false;
+            }
+
+
+
+            if (valido) {
+                window.location.href = "pagamento.html";
+            }
+
+
+        });
+        // Primeira letra maiúscula no nome
+        const nome = document.getElementById('nome');
+
+        nome.addEventListener('blur', function () {
+
+            this.value = this.value
+                .toLowerCase()
+                .replace(/\b\w/g, letra => letra.toUpperCase());
+
+        });
+    </script>
+
+
 </body>
 
 </html>
