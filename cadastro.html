@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 
 <body>
@@ -59,74 +61,75 @@
         </div>
         <br>
 
-            <title>Login Galeria</title>
-    <link rel="stylesheet" href="style.css">
 
-    <!-- Ícones -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     </header> <!-- Header End -->
- 
 
-   <maain> <!--Começo blabla-->
 
-    <div class="paginacadastro">
-    <div class="register-box">
+    <main> <!--Começo blabla-->
 
-        <div class="icon-topcadast">
-            <i class="fa-regular fa-envelope"></i>
+        <div class="paginacadastro">
+            <div class="register-box">
+
+                <div class="icon-topcadast">
+                    <i class="fa-regular fa-envelope"></i>
+                </div>
+
+                <h2 class="cadastro"><b>CRIAR ACESSO</b></h2>
+
+                <form id="formCadastro">
+
+                    <label>Nome</label>
+                    <div class="input-groupcadast">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" id="nome" placeholder="Digite seu nome completo">
+                    </div>
+                    <small class="erro" id="erroNome"></small>
+
+                    <label>E-mail</label>
+                    <div class="input-groupcadast">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" id="email" placeholder="exemplo@email.com">
+                    </div>
+                    <small class="erro" id="erroEmail"></small>
+
+                    <label>Telefone</label>
+                    <div class="input-groupcadast">
+                        <i class="fa-solid fa-phone"></i>
+                        <input type="text" id="telefone" maxlength="15" placeholder="(00) 00000-0000">
+                    </div>
+                    <small class="erro" id="erroTelefone"></small>
+
+                    <label>Senha</label>
+                    <div class="input-groupcadast">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="senha" placeholder="Digite sua senha">
+                    </div>
+                    <small class="erro" id="erroSenha"></small>
+
+                    <label>Repetir Senha</label>
+                    <div class="input-groupcadast">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" id="confirmarSenha" placeholder="Repita sua senha">
+                    </div>
+                    <small class="erro" id="erroConfirmar"></small>
+
+                    <button type="submit" class="booking-btn">
+                        CRIAR
+                    </button>
+
+                </form>
+
+            </div>
         </div>
 
-        <h2 class="cadastro"><b>CRIAR ACESSO</b></h2>
-
-        <form>
-
-            <label>E-mail</label>
-            <div class="input-groupcadast">
-                <i class="fa-regular fa-envelope"></i>
-                <input type="email" placeholder="Digite seu melhor e-mail">
-            </div>
-
-            <label>Telefone</label>
-            <div class="input-groupcadast">
-                <i class="fa-solid fa-phone"></i>
-                <input type="text" placeholder="(00) 00000-0000">
-            </div>
-
-            <label>Senha</label>
-            <div class="input-groupcadast">
-                <i class="fa-solid fa-lock"></i>
-                <input type="password" placeholder="Digite sua senha">
-            </div>
-
-            <label>Repetir Senha</label>
-            <div class="input-groupcadast">
-                <i class="fa-solid fa-lock"></i>
-                <input type="password" placeholder="Repita sua senha">
-            </div>
-
-            <button type="submit" class="botaocadastro">
-                CRIAR
-            </button>
-
-            <p class="login-link">
-                Já possui conta?
-                <a href="login.html">Fazer login</a>
-            </p>
-
-        </form>
-
-    </div>
-    </div>
-
-   </maain>
+    </main>
 
 
 
 
 
-     <!-- Footer Section Begin -->
+    <!-- Footer Section Begin -->
     <footer class="footer-section">
         <div class="container">
             <div class="row">
@@ -220,4 +223,128 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/menu.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script>
+
+        const telefone = document.getElementById('telefone');
+
+        telefone.addEventListener('input', function () {
+
+            let valor = this.value.replace(/\D/g, '');
+
+            valor = valor.replace(/^(\d{2})(\d)/g, '($1) $2');
+            valor = valor.replace(/(\d{5})(\d)/, '$1-$2');
+
+            this.value = valor;
+
+        });
+
+        document.getElementById('formCadastro').addEventListener('submit', function (e) {
+
+            e.preventDefault();
+
+            document.querySelectorAll('.erro').forEach(campo => {
+                campo.textContent = '';
+            });
+
+            let valido = true;
+
+            const nome = document.getElementById('nome').value.trim();
+            const telefone = document.getElementById('telefone').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const senha = document.getElementById('senha').value;
+            const confirmarSenha = document.getElementById('confirmarSenha').value;
+
+            // Nome
+            if (nome.length < 3) {
+                document.getElementById('erroNome').textContent =
+                    'Digite seu nome completo.';
+                valido = false;
+            }
+
+            // Telefone
+            if (telefone.length < 15) {
+                document.getElementById('erroTelefone').textContent =
+                    'Digite um telefone válido.';
+                valido = false;
+            }
+
+            // E-mail
+            if (email === '') {
+                document.getElementById('erroEmail').textContent =
+                    'Digite um e-mail.';
+                valido = false;
+            }
+            else if (!email.includes('@')) {
+                document.getElementById('erroEmail').textContent =
+                    'O e-mail precisa conter @.';
+                valido = false;
+            }
+            else if (!email.includes('.')) {
+                document.getElementById('erroEmail').textContent =
+                    'Digite um domínio válido.';
+                valido = false;
+            }
+
+            // Senha
+            if (senha.length < 8) {
+                document.getElementById('erroSenha').textContent =
+                    'A senha deve ter pelo menos 8 caracteres.';
+                valido = false;
+            }
+            else if (!/(?=.*[A-Z])(?=.*\d)/.test(senha)) {
+                document.getElementById('erroSenha').textContent =
+                    'Use no mínimo 1 letra maiúscula e 1 número.';
+                valido = false;
+            }
+
+            // Confirmar senha
+            if (confirmarSenha === '') {
+                document.getElementById('erroConfirmar').textContent =
+                    'Repita sua senha.';
+                valido = false;
+            }
+            else if (confirmarSenha !== senha) {
+                document.getElementById('erroConfirmar').textContent =
+                    'As senhas não coincidem.';
+                valido = false;
+            }
+
+
+            if (valido) {
+
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Cadastro confirmado!',
+                    text: 'Seu cadastro foi realizado com sucesso.',
+                    confirmButtonText: 'OK'
+                }).then(() => {
+                    window.location.href = "login.html";
+                });
+
+            }
+
+        });
+
+
+
+        // Primeira letra maiúscula no nome
+        const nome = document.getElementById('nome');
+
+        nome.addEventListener('blur', function () {
+
+            this.value = this.value
+                .toLowerCase()
+                .replace(/\b\w/g, letra => letra.toUpperCase());
+
+        });
+
+
+
+    </script>
 </body>
+
+</html>
