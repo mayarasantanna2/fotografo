@@ -1,4 +1,3 @@
-
 <html lang="zxx">
 
 <head>
@@ -22,6 +21,10 @@
     <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
 
 <body>
@@ -43,7 +46,7 @@
                     <div class="mobile-menu-icon">
                         ☰
                     </div>
-                   <nav class="nav-menu mobile-menu">
+                    <nav class="nav-menu mobile-menu">
                         <ul><br>
                             <li><a href="./index.html">INÍCIO</a></li>
                             <li><a href="index.html#sobre">SOBRE</a></li>
@@ -60,71 +63,69 @@
         </div>
         <br>
 
-            <title>Login Galeria</title>
-    <link rel="stylesheet" href="style.css">
-
-    <!-- Ícones -->
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     </header> <!-- Header End -->
 
 
 
- <main> <!--começo principal-->
+    <main> <!--começo principal-->
         <br><br><br>
-    <div class="paidetodos">
-    <div class="login-box">
+        <div class="paidetodos">
+            <div class="login-box">
 
-        <div class="icon-top">
-            <i class="fa-solid fa-lock"></i>
+                <div class="icon-top">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+
+                <h2 class="login">LOGIN</h2>
+
+                <form id="formLogin">
+
+                    <label>E-mail</label>
+                    <div class="input-group">
+                        <i class="fa-regular fa-envelope"></i>
+                        <input id="email" type="email" placeholder="Digite seu email cadastrado">
+                    </div>
+                    <small class="erro" id="erroEmail"></small>
+
+
+
+                    <label>Senha</label>
+                    <div class="input-group">
+                        <i class="fa-solid fa-lock"></i>
+                        <input id="senha" type="password" placeholder="Digite sua senha">
+                    </div>
+                    <small class="erro" id="erroSenha"></small>
+
+                    <div class="options">
+                        <label style=" font-family: 'Poppins', sans-serif," class="remember">
+                            <input type="checkbox">
+                            Lembrar de mim
+                        </label>
+
+                        <a href="blabla">Esqueci a minha senha</a>
+                    </div>
+
+                    <button class="booking-btn" type="submit">
+                        ACESSAR GALERIA
+                    </button>
+
+                    <div class="divider">
+                        <span>ou</span>
+                    </div>
+
+                    <p class="register">
+                        Ainda não tem acesso?
+                        <a href="cadastro.html">Clique aqui</a>
+                    </p>
+
+                </form>
+
+            </div>
+
         </div>
-
-        <h2 class="login">LOGIN</h2>
-
-        <form>
-
-            <label>E-mail</label>
-            <div class="input-group">
-                <i class="fa-regular fa-envelope"></i>
-                <input type="email" placeholder="Digite seu email cadastrado">
-            </div>
-
-            <label>Senha</label>
-            <div class="input-group">
-                <i class="fa-solid fa-lock"></i>
-                <input type="password" placeholder="Digite sua senha">
-            </div>
-
-            <div class="options">
-                <label style=" font-family: 'Poppins', sans-serif," class="remember">
-                    <input type="checkbox">
-                    Lembrar de mim
-                </label>
-
-                <a href="blabla">Esqueci a minha senha</a>
-            </div>
-
-            <button type="submit"> <!--colocar Link falso aq-->
-               <a href=""> ACESSAR GALERIA </a>
-            </button>
-
-            <div class="divider">
-                <span>ou</span>
-            </div>
-
-            <p class="register">
-                Ainda não tem acesso?
-                <a href="cadastro.html">Clique aqui</a>
-            </p>
-
-        </form>
-
-    </div>
-   
-    </div>
-    <br><br><br>
- </main>
+        <br><br><br>
+    </main>
 
 
 
@@ -132,7 +133,7 @@
 
 
 
-     <!-- Footer Section Begin -->
+    <!-- Footer Section Begin -->
     <footer class="footer-section">
         <div class="container">
             <div class="row">
@@ -226,4 +227,47 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/menu.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+
+        document.getElementById('formLogin').addEventListener('submit', function (e) {
+
+            e.preventDefault();
+
+            document.querySelectorAll('.erro').forEach(campo => {
+                campo.textContent = '';
+            });
+
+            const email = document.getElementById('email').value.trim();
+            const senha = document.getElementById('senha').value.trim();
+
+            let valido = true;
+
+            if (email === '') {
+                document.getElementById('erroEmail').textContent =
+                    'Digite um e-mail.';
+                valido = false;
+            }
+
+            if (senha === '') {
+                document.getElementById('erroSenha').textContent =
+                    'Digite uma senha.';
+                valido = false;
+            }
+
+            if (!valido) return;
+
+            // Login fake
+            if (email === 'teste@gmail.com' && senha === '12345678A') {
+                window.location.href = "galeria.html";
+            } else {
+                document.getElementById('erroSenha').textContent =
+                    'E-mail ou senha incorretos.';
+            }
+
+        });
+
+    </script>
+
 </body>
