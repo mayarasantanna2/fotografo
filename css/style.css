@@ -1015,7 +1015,7 @@ ol {
 	right: -33px;
 	top: -1px;
 	content: "|";
-	color: #d7d7d7;
+	color: #614d3b; 
 }
 
 .filter-controls ul li:last-child {
@@ -2554,84 +2554,193 @@ footer a{
   Gallery
 -----------------------*/
 
+
+.galeria-topo{
+    text-align: center;
+    padding: 60px 20px 40px;
+    background: #f5f0eb;
+}
+
+.galeria-titulo{ /*ffffff*/
+    font-size: 36px;
+	font-family: 'Poppins';
+    letter-spacing: 4px;
+    color: #BA9074;
+    margin-bottom: 20px;
+}
+
+.galeria-linha{
+    width: 300px;
+    height: 2px;
+    background: #BA9074;
+    margin: 0 auto;
+	margin-bottom: 20px;
+	margin-top: 0;
+}
+
+.galeria-texto{
+    max-width: 600px;
+    margin: 0 auto;
+    color:  #A28979;
+    line-height: 1.8;
+}
+
+.download-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    color:#8b6d52;
+    padding:12px 22px;
+    font-size:14px;
+    font-weight:600;
+    letter-spacing:1px;
+    text-decoration:none;
+    text-transform:uppercase;
+}
+
+.download-btn i{
+    font-size:14px;
+}
+
+
 .gallery-section {
-	padding-top: 0;
+    background:  #8a4c253a;
+    max-width: 1400px;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 80px;
+	border: 50px;
 }
 
 .gallery-section .container-fluid {
-	padding-left: 35px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.gallery-filter {
+    overflow: hidden;
+    animation: fadeGaleria .8s ease;
 }
 
 .gallery-filter .gf-item {
-	width: calc(20% - 20px);
-	height: 360px;
-	float: left;
-	margin-right: 20px;
-	margin-bottom: 20px;
-	position: relative;
-	z-index: 1;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	align-items: center;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	overflow: hidden;
+    width: calc(20% - 8px);
+    height: 360px;
+    float: left;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 6px;
+    transition: all .35s ease;
 }
 
+
 .gallery-filter .gf-item.small-height {
-	height: 240px;
+    height: 240px;
 }
 
 .gallery-filter .gf-item.medium-small-height {
-	height: 410px;
+    height: 410px;
 }
 
 .gallery-filter .gf-item.large-small-height {
-	height: 440px;
+    height: 440px;
 }
 
 .gallery-filter .gf-item.large-height {
-	height: 540px;
+    height: 540px;
 }
 
 .gallery-filter .gf-item.medium-large-height {
-	height: 510px;
+    height: 510px;
 }
+
+/* Overlay */
 
 .gallery-filter .gf-item:after {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(0, 0, 0, 0.6);
-	content: "";
-	z-index: -1;
-	opacity: 0;
-	-webkit-transition: all 0.3s;
-	-o-transition: all 0.3s;
-	transition: all 0.3s;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(105, 63, 35, 0.603);
+    content: "";
+    z-index: -1;
+    opacity: 0;
+    transition: all .3s ease;
 }
 
+
+
 .gallery-filter .gf-item .gf-icon {
-	font-size: 36px;
-	color: #ffffff;
-	opacity: 0;
-	-webkit-transition: all 0.3s;
-	-o-transition: all 0.3s;
-	transition: all 0.3s;
+    font-size: 36px;
+    color: #fff;
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+
+.gallery-filter .gf-item:hover {
+    box-shadow: 0 12px 25px rgba(97, 64, 43, 0.623);
 }
 
 .gallery-filter .gf-item:hover:after {
-	opacity: 1;
+    opacity: 1;
 }
 
 .gallery-filter .gf-item:hover .gf-icon {
-	opacity: 1;
+    opacity: 1;
+}
+
+@keyframes fadeGaleria {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 1200px) {
+    .gallery-filter .gf-item {
+        width: calc(25% - 8px);
+    }
+}
+
+@media (max-width: 991px) {
+    .gallery-filter .gf-item {
+        width: calc(33.33% - 8px);
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-filter .gf-item {
+        width: calc(50% - 8px);
+    }
+}
+
+@media (max-width: 576px) {
+    .gallery-filter .gf-item {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .galeria-titulo {
+        font-size: 30px;
+    }
+
+    .galeria-texto {
+        font-size: 14px;
+    }
 }
 
 /*---------------------
